@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      Task:
+
+      <p>1. Remove duplicates in an array.</p>
+      <p>
+        2. Count the number of occurrences elements in an array and display in
+        an object.
+      </p>
+    </div>
+    <script>
+      // Count the number of occurrences elements in an array and display in an object.
+      function findOccerences(array){
+        obj={}
+       for(i=0;i<array.length;i++){
+         let num=array[i]
+         obj[num]=0
+         for(j=0;j<array.length;j++){
+           let num2=array[j]
+           if(num==num2){
+            obj[num]+=1
+
+          }
+        }
+      }
+      return obj
+      }
+      const array=[1,2,2,1,1,4,53,1,2,3]
+      const op =findOccerences(array)
+      console.log(op);
+
+      //  debugger
+      // function findOccurrences(array) {
+      //     let obj = {};  // Initialize the object to store occurrences
+      //     for (let i = 0; i < array.length; i++) {
+      //         let num = array[i];  // Current element
+      //         if (obj[num]) {
+      //             obj[num]++;  // If the element exists, increment its count
+      //         } else {
+      //             obj[num] = 1;  // Otherwise, initialize its count to 1
+      //         }
+      //     }
+      //     return obj;  // Return the occurrences object
+      // }
+
+      // const array = [1, 2, 2, 1, 1, 4, 53, 1, 2, 3];
+      // const op = findOccurrences(array);
+      // console.log(op);  // Output the result
+
+      // function evenMean(arrr){
+      //   let evenarray=0
+      //   let avg=0
+      //   for(i=0;i<=arrr.length;i++){
+      //     if(arrr[i]%2==0){
+      //       avg++
+      //       evenarray=evenarray+arrr[i]
+      //     }
+      //   }
+      //   return Math.floor((evenarray/avg))      }
+      // let arrr=[1,2,3,4,5,6,7,8,2];
+      // console.log(evenMean(arrr));
+
+      
+
+      // debugger;
+      // Remove duplicates in an array.
+      function duplicateNum(arr) {
+        let orginalarr = [];
+        for (i = 0; i < arr.length; i++) {
+          let isthere = false;
+          for (j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+              isthere = true;
+            }
+          }
+          if (!isthere) {
+            orginalarr.push(arr[i]);
+          }
+        }
+        return orginalarr;
+      }
+      let arr = [1, 2, 3, 4,8,7, 5, 6, 7, 8, 2];
+      console.log(duplicateNum(arr));
+
+
+// debugger
+      let num=10
+      let n1=0
+      let n2=1
+      let next;
+      for(i=0;i<num;i++){
+        console.log(`${n1}`);
+        next=n1+n2
+        n1=n2
+        n2=next
+      }
+      
+    </script>
+  </body>
+</html>
